@@ -1,6 +1,8 @@
 # functional et son framework
 une librairie de programmation fonctionelle JavaScript (et son framework)
 
+//-- todo: écrire un read me crédible, finir la page de présentation(à partir du vieux xml qui traîne quelque part)
+
 (functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
 #framework un framework complétement objet en cours de développement (aucun nom définit à ce jour) le complétera et s'appuiera dessus.
@@ -8,13 +10,19 @@ functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la
 
 
 Le but premier de functional.js (à part me faire un peu la main) est de me fournir des routines globales. Bien que d'autres librairies/bibliothéques existe j'ai essayé d'y apporter plusieurs avantages.
+
 _la programmation fonctionnelle se base peu sur les modèles/pattern de programmation OOP/POO. Bien qu'en JavaScript le terme fonction et objet soit très peu différent(mais cela évolue depuis ecmascript6 et < nottament avec l'utilisation du mot clé class) ici c'est le chaînage des fonctions renvoyant toujours une valeur primaire traitée ou résultante des paramètres/arguments de la fonction utilisée.
+
 _L'écriture vise à s'approcher d'une lecture intuitive plus proche du langage humain que la logique mathématique et informatique. Il peut donc être plus accessible que certaines autres bibliothéques pour les développeurs tout en gardant une limpidité de lecture sans noms et mots à rallonge(à noter qu'une future version minifiée devra être adaptée pour tenir compte de la minification). NOTE: Des versions raccourcies des fonctions existent pour un grand nombre d'entre elles ou certaines pour faciliter la frappe sont des clones. Exemple sayLog(arg) et saylog(arg) sont identiques. Ceci vise à faciliter l'écriture du code et éviter les erreurs de casse.
+
 _création de simili-threads: le fichier functional.instructions.js comporte des tableaux(Array) comprenant un nom, une fonction anonyme crée par le développeur, une liste d'argument (optionels) et les fonctions permettant leur 
 
 _L'ensemble des fichiers .js vise à être modulaire à partir d'un tronc commun functional.XX.js (XX indiquant le numéro de version en cours) auquel les différents modules spécifiques et spécialisées peuvent être incorporés. Certains modules requiérent néanmoins en plus du tronc commun des modules mères, cela est systèmatiquement indiqué dans le début de chaque fichier lorsque c'estle cas. Exemple: le fichier functional.head.js qui apporte entre autres une gestion des styles dans le head d'un document HTML est nécessaire pour functional.modal.js comportant des fenêtres modales. Ce fonctionnement modulaire vise à permettre une meilleure optimisation des ressources en limitant le nombres de lignes de codes inutilisées à charger tout en permettant de pouvoir éventuellement rajouter les modules omis ou de nouveaux modules qui ont été crées.
+
 _Bien qu'actuellement utilisé en contexte global il est possible de traiter les scripts utilisant functional.js en tant qu'items objets. Cela permet de moduler la sécurité des scripts selon les besoins en utilisant un adapteur qui les contiendra. Bien que non actuellement développé et testé cela implique que les fonctions sont/seront compatibles avec les autres framework les plus répandus comme JQuery.
+
 _Rapidité encore: L'une de mes motivations au développement étant l'animation
+
 _Polyfils et rétro-adaptation: Plusieurs fonctions utilisant ECMASCRIPT6> et HTML5 contiennent des fonctions tests et leur adaptation des nouvelles fonctionnalités aux anciennes version de JavaScript comme au différents envirronnements d'exploitation du code, aussi bien logicielle(navigateur) que matériel(web reponsive scripting). NOTE: certains polyfils sont des captations de fonctions existantes et sous licence libre, dans ce cas l'auteur est cité. Si ce n'est pas le cas merci de nous prévenir afin que nous rectifions l'oubli.
 
 IMPORTANT:
