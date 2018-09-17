@@ -1,6 +1,7 @@
 # functional et son framework
 une librairie de programmation fonctionelle JavaScript (et son framework)
-(fonctional is using functional programming in a JavaScript context).
+
+(functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
 #framework un framework complétement objet en cours de développement (aucun nom définit à ce jour) le complétera et s'appuiera dessus.
 #additionals.js est un fichier de fonctions annexes spécifique à l'utilisation du framework, ne rentrant pas dans le cadre objet ni ne pouvant être affilié à un module du tronc commun de functional.XX.js
