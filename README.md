@@ -3,6 +3,9 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 
 //-- todo: écrire un read me crédible, finir la page de présentation(à partir du vieux xml qui traîne quelque part)
 
+Pour la librairie voir functional.1.2.3 (stable) ou funcitonals.js(la même mais dev en cours) et ses modules intitulés functional.MACHIN.js (même si y en a des foireux et qu'il en manque un paquet)
+
+
 (functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
 #framework un framework complétement objet en cours de développement (aucun nom définit à ce jour) le complétera et s'appuiera dessus.
