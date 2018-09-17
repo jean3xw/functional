@@ -10,8 +10,10 @@ et ses modules intitulés functional.MACHIN.js (même si y en a des foireux et q
 
 (functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
-#framework un framework complétement objet en cours de développement (aucun nom définit à ce jour) le complétera et s'appuiera dessus.
-#additionals.js est un fichier de fonctions annexes spécifique à l'utilisation du framework, ne rentrant pas dans le cadre objet ni ne pouvant être affilié à un module du tronc commun de functional.XX.js
+
+##framework un framework complétement objet en cours de développement (aucun nom définit à ce jour) le complétera et s'appuiera dessus.
+
+##additionals.js est un fichier de fonctions annexes spécifique à l'utilisation du framework, ne rentrant pas dans le cadre objet ni ne pouvant être affilié à un module du tronc commun de functional.XX.js
 
 
 Le but premier de functional.js (à part me faire un peu la main) est de me fournir des routines globales. Bien que d'autres librairies/bibliothéques existe j'ai essayé d'y apporter plusieurs avantages.
