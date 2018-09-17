@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>execution loop - Thread like using (or not) array functions with functional.instructions</title>
+<script src="functionals.js"></script>
+<script src="functional.head.js"></script>
+<!--<script src="librarie/functional.modal.js"></script>
+<script src="additionals.js"></script>
+<script src="librarie/functionals.graphickit.js"></script>
+<script src="librarie/domtree.1.js"></script>-->
+<script src="functional.instructions.js"></script><!-- required -->
+<script src="loopexe.js"></script>
+<!--<script src="librarie/framework.1.js"></script>-->
+<style type="text/css" rel="stylesheet">body{margin:0;padding:0;}h1, h2,h3,h4,h5,h6{text-align:center;letter-spacing:0.28em;text-decoration:underline overline;border:thin dotted rgba(100,100,255,0.5);border-left-width:0;border-right-width:0;padding:0;margin:0 2em;}a{color:#000;font-style:italic;color:green;}a:visited{color:blue;font-style:normal;padding-left:1em;}body section > article{float:left;width:30%;margin: 0 0.75% 0 0.25%;padding: 0.2em 0.38em ;border:1px solid cyan;border-left-width:0;border-right-width:0;border-bottom-style:dashed;}section article > h2{color:blue;letter-spacing:0.8em;}</style></head>
+<body><a id="webref" href="www.w3schools.com/jsref/default.html" target="BLANK">w3schools</a>
+<h1>carnet développement</h1>
+<section>
+<article>
+<h2>divers</h2>
+test de loopexe.js , require ES6 or &gt; (class and default argument + functionals.js)
+<br>
+
+</article>
+<article>
+<h2>todo</h2>
+</article>
+<article>
+<h2>done</h2>
+<div></div><div></div></article>
+
+</section>
+
+<script>
+/** page settings */
+toDomBefore( setAttr(newTextLink('webref','w3schools','file:///C:/Users/jano/Documents/docs/www.w3schools.com/jsref/default.html'), 'target','BLANK'),
+ body().firstChild);
+
+toDomBefore( newBt('unpause the loop(when stopped)','unpauser','unpausetheloop'), body().firstChild);
+getId('unpauser').addEventListener('click',function(e){
+	ilog(e);
+	lxc.setLimitDuration(timeNow()-lxc.timer.startTime+1600);
+	lxc.unpause();
+},false);
+
+/** head.style settings */
+addPageStyle('body','margin:0;padding:0;');//-- TODO clearMarges(body()) A DEBUGER !!
+addPageStyle('h1, h2,h3,h4,h5,h6','text-align:center;letter-spacing:0.28em;text-decoration:underline overline;border:thin dotted rgba(100,100,255,0.5);border-left-width:0;border-right-width:0;padding:0;margin:0 2em;');
+addPageStyle('a','color:#000;font-style:italic;color:green;');
+addPageStyle('a:visited','color:blue;font-style:normal;padding-left:1em;');
+addPageStyle('body section > article','float:left;width:30%;margin: 0 0.75% 0 0.25%;padding: 0.2em 0.38em ;border:1px solid cyan;border-left-width:0;border-right-width:0;border-bottom-style:dashed;');
+addPageStyle('section article > h2','color:blue;letter-spacing:0.8em;');
+</script>
+
+
+<script>
+/** OK
+let lx=new LoopExe(41);
+lx.setStopLimits(9000,214);
+lx.setLoop(function(){saylog('debut'+timeNow());}, function(){saylog('loop'+timeNow());}, function(){saylog('finish'+timeNow());});
+lx.setUseSpeed(true);
+lx.start();*/
+//noLog();//-- uncomment to see only essential messages!
+const LIMITDURATIONdefault=1600;//-- ms duration
+let lxc=new LoopExecuter(33);
+
+lxc.setStopLimits( LIMITDURATIONdefault , Math.floor(LIMITDURATIONdefault/lxc.timer.speed) );//-- NOTE: sans certains cas framecount (argument[1]) will be limit, usually duration argument[0] //-- TODO ajouter méthodes utilisant ce rapport (duration/speed) pour affiner
+//lxc.setUseSpeed(false);//-- uncomment to use animation not speed related (speed around 1000/60 depending of browser)
+/*
+lxc.setLoopDebut(['testdebut',function(a){ saylog('executer debut '+a);},timeNow()]);
+lxc.setLoopExe(['testexe',function(a){ saylog('executer exe '+a);},timeNow()]);
+lxc.setLoopFinish(['testfinish',function(a){ saylog('executer finish '+a);},timeNow()]);
+*/
+//-- NOTICE : setLoop  SAME as setLoopDebut + setLoopExe + setLoopFinish
+
+//-- for example/test setLoop is array of array (firstdo, testdebut 
+//lxc.setLoop([['firstdo',function(){saylog('very first of loop ')}],['testdebut',function(a){ saylog('executer debut '+a);},timeNow()]],['testexe',function(a){ saylog('executer exe '+a);},timeNow()],['testfinish',function(a){ saylog('executer finish '+a);},timeNow()]);
+//-- example using a named function
+function aNamedFunction(arg){	saylog('with a named function : '+arg);}
+lxc.setLoop([['firstdo',function(){saylog('very first of loop ')}],['aNamedFunction',aNamedFunction,'some argument']],//-- loopDebut aka arg[0]
+['testexe',function(a){ saylog('executer exe '+a);},timeNow()],//-- loopExe aka arg[1]
+['testfinish',function(a){ saylog('executer finish '+a);},timeNow()]//-- loopFinish aka arg[2]
+);
+lxc.start();//-- unquote/quote to see/hide loop running
+</script>
+
+</body>
+
+</html>

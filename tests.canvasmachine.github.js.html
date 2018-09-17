@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<script src="canvasmachine.1.js" ></script>
+<script src="functional.canvasIHM.js" ></script>
+<style type="text/css" rel="stylesheet">
+body{
+margin:0;padding:0;
+text-align:left;
+}
+#mainsection{
+width:98%;
+padding:0.5%;
+margin-left:0.5%;
+border:1px solid red;
+background-color:#eef;
+}
+#panel{
+position:fixed;
+left:0.5%;
+width:30%;
+border:2px solid cyan;
+background-color:rgb(40,132,40);
+background-color:rgba(100,220,100,0.6);
+border-radius: 0 1em 1em 0;
+padding:0;
+}
+#paneltitle{
+position:static;
+margin:0;
+padding:0;
+text-align:center;
+color:#0047ad;
+background-color:rgb(102,102,102);
+background-color:rgba(255,255,255,0.4);
+}
+.off{}
+
+</style>
+</head>
+<body>
+<script>
+let docroot=document.getElementsByTagName('body')[0];
+
+let main=document.createElement('section');
+main.id = 'mainsection';
+
+let panel=document.createElement('section');
+panel.id='panel';
+let panelTitle=document.createElement('h3');
+
+panelTitle.id='paneltitle';
+panelTitle.innerHTML='Canvas Drawing 2D';
+
+
+panel.appendChild(panelTitle);
+docroot.appendChild(panel);
+
+//--function createCanvasAndRender2D(id,w,h,bg=null){
+let cnv = createCanvasAndRender2D('cnv',800,600,'rgba(120,120,255,0.4)'); //-- ARRAY[ canvas tag, context 2d ]
+
+docroot.appendChild(main);
+main.appendChild(cnv[0]);
+function panelSwitch(){
+	if(panelTitle.getAttribute('class')=='off'){
+		panelTitle.setAttribute('class', '');
+		panel.setAttribute('style','');
+	}else{
+		panelTitle.setAttribute('class', 'off');
+		panel.setAttribute('style','left:-29.5%;');
+	}
+};
+panelTitle.addEventListener( 'click' , panelSwitch , false );
+
+
+/** UI */
+let nl=function newArticle(title,lv){	let tmp=document.createElement('article');tmp.appendChild(document.createElement('h'+lv));tmp.firstElementChild.innerHTML=title;return tmp;	};
+let frm=document.createElement('form');
+frm.id=frm;
+let popcircle=document.createElement('button');
+popcircle.innerHTML='circle';
+let circrayon=document.createElement('input');
+circrayon.id = 'rayon';
+circrayon.setAttribute('type','number');
+circrayon.setAttribute('min','1');
+circrayon.setAttribute('max','600');
+let circcolor=document.createElement('input');
+circcolor.id='ccolor';
+circcolor.setAttribute('type','color');
+
+let circ=nl('circle',4);
+circ.appendChild(circrayon);
+circ.appendChild(circcolor);
+circ.appendChild(popcircle);
+panel.appendChild(circ);
+
+function drawMyCirc(evt){
+	
+//--function createCircle(ctx,xo,yo,r){ 
+
+	/**
+	function mouseCanvasCoordinates(canvas,evt,xorigin=0,yorigin=0)
+	*/
+	let mouseCoords=mouseCanvasCoordinates(cnv[0],evt);
+	let xm = mouseCoords.X(), ym=mouseCoords.Y() , r = document.getElementById('rayon').value;
+	console.log('( '+xm+' , '+ym+' )' );
+	saveCTX(cnv[1]);
+	drawCircle( fillColor( cnv[1], document.getElementById('ccolor').value ) , xm , ym , r ,'fill')
+	restoreCTX(cnv[1]);
+}
+
+popcircle.addEventListener('click',function(){
+	cnv[0].addEventListener('click',function(e){drawMyCirc(e);cnv[0].removeEventListener('click', this, false);} , false);
+	
+}, false);
+
+</script>
+
+</body>
+</html>

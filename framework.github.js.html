@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>FrameWork(v0): développement en cours </title>
+				<!-- 	envirronnement(functions et objets litteral) surtout global scope -->
+<script src="functionals.js"></script>					<!-- fichier de dev. constant de functional.js (version actuelle 1.2.3) FUNCTIONAL : main librairie programmation functionnelle (achévement >90% pour versions stable) -->
+<script src="functional.head.js"></script>				<!-- manipuler les élements de head (surtout head.style ) (60%) -->
+<script src="functional.modal.js"></script>			<!-- créer fenêtre modale (80%) -->
+<script src="additionals.js"></script>					<!-- fonctions liées à l'API et en cours de dev (ancien methodal.js) (?%) -->
+<script src="functionals.graphickit.js"></script>		<!-- utilisation de visuels prédéfinis(pour l'instant seulement class et id avec functional.head.js ) (3%)-->
+				<!--	 OBJECTs FRAMEWORK class , function , Object, primaries... -->
+<script src="domtree.1.js"></script>					<!-- arbre des eléments(body) de la page / arbre DOM virtuel (>60%)-->
+<script src="animotor.js"></script>					<!-- la boucle d'exécution principale(main RUNTIME) et le moteur permettant de gérer et régler les instructions à executer 		// peut être une boucle pour ce qu'on veut , en version finale un équivalent d'un Thread // note: scindés en 2 fichiers pour les 2 fonctionnalités (voir framework.1.js.html) -->
+<script src="framework.js"></script>					<!-- un premier jet en flux tendu -->
+</head>
+<body>
+<h1 class='toplinecenter'>Projet (FrameWork)
+<span>
+CLIQUER Ce bloc(h1 rouge sombre) => display <code>new FrameWork()</code> <hr>trouver nom:
+<footer>
+*<i> name(s) select: </i> eMover // Powerdom // MOVAL
+</footer>
+<pre>
+* WVM (Worlds Views Maker) / AVWW Action Virtual Web W / WAM Web Action Machine
+*Web Intelligent Engine View (WIEV)
+* MOV (Motor On Web)
+* eMOVER
+* WOWIEW (worlds operate wide interactions endeavors web )
+* MOVAL( Making Of Worlds Action Logic )
+* USARE (Unlimited Stages Actions Reactions Endeavors) 
+	WEARE (Web Endeavors Actions Reactions Enterttainement)
+* GameWorld 
+* World Occur Pen (Wop) (Wop/doM mirrored)
+* powmod ( are mirrored words pow / mod ) 
+* Powerdom 
+* Com Port JS
+* Web Worlds's Machine (WWM)
+* DOM WORLDS BUILDER (DWB)
+* OVERGAME 
+* MONDE (Machine Occurence Name Display Emit)
+* WebWorldWays
+* Worlds Run Imaginary To Emit (WRITE)
+</pre>
+
+<br>
+</span>
+</h1>
+
+
+<script>
+loadInit(function(){
+/** */
+const MODELTEXTHTML='<h4>class nameXT: name+inherited class(es) / with \'{\' content... \'}\' class content.. / </h4>Modele:<hr>'+
+'class Motor/Animotor { launch:class LaunchAPI(), Animation/AnimationRatio/step to step <span>manage loop STAGE</span>'+
+'class LaunchAPI() {}<span>set(from input/harcoded script or higher level than Motor(except if FIRE())), load(from DataCollection), import(from class MotorXT) , </span>';
+const TECHSTEXTHTML='<h4>Techs &amp; features</h4><ul><header>Prérequis(optimisation car polyfils possibles) </header>'+
+'<li>HTML5 pour ses nouveaux élements (surtout Canvas context 2d mais certains tag/attributs sont utilisés dans functional.js comme l\'API)</li>'+
+'<li>ECMASCRIPT 6 / dans ma version de IE ES5(?) est plein d\'erreurs(class, et default function argument not exist)</li>'+
+'<header>features</header><li>Adaptabilité/web adaptative : taille écran, périphériques d\'entrées(souris, touchscreen...), performances(mémoires, vitesse exécution...) avec polyfil etc...</li>'+
+'<li>plate forme développement aplication en JavaScript /jeux HTML5, interface visuelle(pour plus tard)</li>'+
+'<li>script limpide(avec functional.js) - human writable/readable en programmation fonctionnelle (chaînable, un minimum de variables utilisés...)</li>'+
+'<li>Animation du DOM par un simili thread/runtime </li>'+
+'<li>Animation Canvas2D (avec équivalent HTMLElement) </li>'+
+'</ul>';
+/** */
+toBody( newTextLink('nextgen','nextversion(v:0.1)','framework.1.js.html') );
+console.log(this+'load');
+pageStyle();
+
+
+addPageStyle('ul header','color:#824;text-decoration:underline;display:block;width:100%;border-bottom:2px ridge rgba(255,235,40,0.4);');//--style header POUR texte dans const TREEuitext @ domtree.1.js 
+addPageStyle('ul','list-style-type:circle;');
+addPageStyle('.nottodo','list-style-type:disc; color:#00f;background-color:rgba(120,120,220,0.6);text-align:center;');//-- @domtree.1.js élement de liste TODO  class = done
+
+addPageStyle('body','margin:0;padding:0;overflow-x:hidden;background-color:#000;');
+addPageStyle('a','background-color:white;border-radius:0.3em;padding:0.2em;margin:0.2em;');
+addPageStyle('a:hover ','background-color:orange; color:#00f;');
+addPageStyle('a:visited','color:#77f;');
+addPageStyle('a:active','color:#f77;background-color:#77f;');
+addPageStyle('code','background-color:cyan;color:blue;padding:0 0.5em');
+addPageClass('toplinecenter','position:absolute;top:0;display:block;width:100%;text-align:left;padding-left:5%;color:#356acf;background-color:#220011;background-color:rgba(68,0,17,1);z-index: -1;');
+addPageStyle('.toplinecenter span','background-color:rgba(25,25,236,1);color:#78cd78;font-size:9pt;clear:both;');
+addPageStyle('.toplinecenter footer','background-color:#fff;color:#00f;font-size:9pt;');
+
+let purpose = setAttr(addClass(destIn( write(newTag( 'p' ),'jeu aventure, action, rôle <hr> suite de mini-jeux associant l\'histoire de l\'informatique et des débuts des jeux vidéos<br> technologies : le moteur permet d\'afficher/animer des objets DOM & Canvas'),
+	destIn( write(newTag('h2'),'World War Web - Web Invaders'),
+		write(newTagId('article','purpose'), 'future of this API: Plateforme de développement de jeux HTML5')
+	)),'hideright'), 'alt','cliquer pour voir');
+toBody(purpose);
+/** class pour fenêtre modale(s) */
+addPageStyle('autoLaunched-modal','background-color:rgba(255,255,255,0.6);color:#00F;');/** fix bg opacity to more opacity and change base font color to blue*/
+addPageId( 'purpose', 'position:absolute;margin-left:60%;width:38%;background-color:rgba(0,0,100,0.92);color:#00bd34;padding:0.2em;' );
+addPageClass( 'hideright', 'right:-36%;');
+addPageClass( 'showright', 'right:0;');
+listen(purpose,'click',function(){ if( purpose.className==='hideright' ){ setClass( purpose,'showright;');}else{setClass(purpose,'hideright');}} );
+//addPageClass('btstop'){	}
+/** MODAL WINDOW  save functional.modal.js (d:)  */
+//--	function newModal(id,bt,aim,content,width,height,vt='center',hz='center',maxresize=true,z=0,animated=true){
+//--	function addBt(id, val, alt, content){;
+
+let btOpen = setStyle(newTagId('button','openup'),'z-index','7');
+btOpen.value='OUVRIR MODAL';
+btOpen.type='button';
+say(btOpen, 'voir modele' );
+toBody(btOpen);
+let myContent = newTag('section');
+setCss(myContent,'background-color:rgba(110,110,110,0.5);color:#7578ff;padding:1em;');
+destIn( write(newTagClass('p','bloc'), ''+MODELTEXTHTML ),
+		destIn(setStyle(write(newTag('h1'),'Conception'),'text-align:center;width:50%;'),
+			toDom(newTag('article'),
+				myContent
+		)));
+let btOpen2 = setStyle(newTagId('button','openup2'),'z-index','7');
+btOpen2.value='OUVRIR MODAL2';
+btOpen2.type='button';
+say(btOpen2, 'voir techs' );
+toBody(btOpen2);
+
+/** modal head.style*/
+addPageClass('bloc','float:left;width:95%; background-color:rgba(255,255,255,0.8);margin-left:2.5%;padding:1em;');
+addPageStyle('.bloc span','font-size:0.8em; color:red;font-style:italic;');
+//function launchModal(id,autoBt,aim,content,width,height,vt='center',hz='center',maxresize=true,z=0,animated=true){
+document.getElementById('openup').addEventListener('click',	function(){launchModal('autoLaunched',newBt('go','autobt','whocare'),document.body,myContent,95,75,2.5,2.5,true,2,false );}, false );
+document.getElementById('openup2').addEventListener('click',function(){launchModal('autoLaunched',newBt('go','autobt','whocare'),document.body,writeTag('article',TECHSTEXTHTML),95,75,2.5,2.5,true,2,false );}, false );
+//-- END MODAL script
+/*	------------------------- EN COURS -----------------  Work In Progress -------------------------------	*/
+//--function listen(tag, eventtrigger, instr,bubble=false)
+
+let fm;/*=new FrameWork();*/
+listen(document.getElementsByTagName('h1')[0],'click',function(){
+	fm=new FrameWork();
+	toBody(setClass(newBt('stop','stoprun',true),'bstop'));
+	toBody(setClass(newBt('start','startrun',true),'bstart'));
+	getId('stoprun').addEventListener('click',function(){saylog('\tLOOP RUNTIME STOPPED BY CLICK [HTMLElement'+this.tagName+']id:'+this.id+' bool:'+fm.stop());},false);
+	getId('startrun').addEventListener('click',function(){fm.startLoop();},false);
+	
+});
+/** CHECKED
+//let d=new TreeFrameWorkDefault();
+*/
+
+}); //-- END body.onload with loadInit(instr)
+</script>
+</body>
+</html>
