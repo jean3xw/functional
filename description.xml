@@ -1,0 +1,30 @@
+<framework currentVersion="alpha.0">
+	<note>Parse this file to XSL/XLST</note>
+	<classesDescription about="UML like">
+		<part pattern="data view factory" >
+			<datas vartype="classJS">
+	DataCollection
+	<holder vartype="objectlitteral">
+	datalist
+	</holder>
+		<object vartype="classJS">
+		factory: class Generator XT [type]
+		</object>
+		<object vartype="classJS">
+		domview: class DOMTree XT [type]
+		</object>
+			</datas>
+			<dataview vartype="entity">
+	<object vartype="classJS" context="CanvasRenderer2d">
+		CanvasEngine
+<holder vartype="classJS" >
+	ViewItems / liste des graphs canvas
+</holder>
+<object vartype="classJS">
+	methodes canvas Draw
+</object>
+	</object>
+			</dataview>
+		</part>
+	</classesDescription>
+</framework>
