@@ -14,7 +14,7 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 * functional.instructions.js création de fonctions et contexte d'exécution(répéter, automatiser, sélectionner des functions dans un Array [ nom, instructions , paramétre(s) optionnel] ou un liste Array de Array).
 
 ** FRAMEWORK
-* loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame
+* loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame, permet aussi d'indiquer une durée en temps(ms) ou nombre de frame. L'exécution des instructions peut aussi être divisé en avant, pendant et après (chaque étape pouvant utiliser les résultats obtenus par la phase précédente).
 * datacollection.js modèle de données comprenant un générateur (factory pattern)
 * domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du DOM(sérialisable)
 
