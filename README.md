@@ -18,12 +18,12 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 * datacollection.js modèle de données comprenant un générateur (factory pattern)
 * domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du dom
 
-AUTRES
+** AUTRES
 * canvasmachine.1.js interface de dessin CANVASRenderer2D
 * dom2d.js une alternative à canvas de dessin 2D utilisant des éléments DOM pour simuler (dev non aboutit)
 -----------------------------------------------------------------------------------------------------------------
 
-PREVUS PLUS TARD OU EN COURS
+** PREVUS PLUS TARD OU EN COURS
 * des générateurs d'items spécifiques au framework (factory pattern) 
 * des presets graphiques utilisant CSS, SVG, ASCII pour générer des objets graphiques (i.e.: functional.graphickit.js )
 * plusieurs interfaces utilisateur dans plusieurs contextes(menus de dialogue, interactivité canvas...) voir functional.modal.js, functional.form.js, functional.canvasIHM.js
@@ -32,6 +32,7 @@ PREVUS PLUS TARD OU EN COURS
 -----------------------------------------------------------------------------------------------------------------
 ET bien d'autres bonnes et belles choses!!!
 */
+-----------------------------------------------------------------------------------------------------------------
 (functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
 
