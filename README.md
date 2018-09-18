@@ -16,7 +16,7 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 ** FRAMEWORK
 * loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame
 * datacollection.js modèle de données comprenant un générateur (factory pattern)
-* domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du dom
+* domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du DOM(sérialisable)
 
 ** AUTRES
 * canvasmachine.1.js interface de dessin CANVASRenderer2D
