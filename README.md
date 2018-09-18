@@ -47,3 +47,8 @@ _version:  actuelle  v: 1.2.3 Le fichier servant au développement est nommé fu
 
 (anciens fichiers abandonnées)
 _animation.js, loop.js , looper.js , runanimation.js sont abandonnées. Dédiés à l'animation par setInterval/requestAnimationFrame bien que d'une approche intéressante. Les fichiers servants au framework les remplaçants (favorisant cette fois requestAnimationFrame) est loopexe.js , il recquiert functional.instructions.js
+
+_AJOUT de fichiers notyetused.functional.MODULENAME.js le préfixe notyetused indique qu'ils ne sont pas encore intégré dans le dev global. Ils sont pourtant fonctionnels même si à comléter pour la plupart. 
+A NOTER : notyet.used.polyfill.js ne contient pas tout les polyfill(pour l'instant) certains qui sont nécessaires à un module ou l'autre sont intégrés directement. A corriger.
+  notyetused.ecmascript6.js contient des spécifités à ES6 (pour l'instant uniquement la création de symboles) même si d'autres sont incluses soit dans le tronc commun soit dans les fichiers de module.
+ notyetused.functional.form.js est à compléter même si déjà pas mal de funcs incluse(donc quelques nouveautés de balises HTML5), notyetused.functional.media.js ne contient qu'une petite interface pour API video player , notyetused.functional.color.js un convertisseur hexa 2 bits / rgb255, notyetused.functional.element.js est assez étoffé mais pas une nécessité réelle pour l'instant car pas mal de funcs déjà incluses dans tronc commun.
