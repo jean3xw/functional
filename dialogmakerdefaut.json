@@ -1,0 +1,50 @@
+'dataslist':{
+'debut':{
+'quest':'Bien venue dans le fichier défaut de dialog maker:',
+'sel': ['commencer le tutorial', 'afficher la bibliothéque de référence','infos'],
+'rep':['begintuto','showbiblio','infolist']
+,'cmd':'none'
+},
+'begintuto':{
+'quest':'L\'application permet de créer des séries de questions/réponses et leur liaisons ainsi que d\'ajouter une ou plusieurs commandes. Vous pouvez alors exécuter la série de dialogues, la modifier, la sauvegarder. Cliquez suivant pour continuer:',
+'sel':['suivant','revenir à l\'accueil'],
+'rep':['tuto0','debut']
+,'cmd':'none'
+},
+'tuto0':{
+'quest':'Une fois le programme(fichier html) démarré dans le navigateur un panneau de gestion s\'affiche. Ce panneau est l\interface principale de Dialog Maker, pour la masquer cliquer sur son bord gauche. Dans le panneau vous pouvez ajouter une question et ses choix/réponses. Il est préférable d\indiquer un nom pour la série.',
+'sel':['suivant','accueil'],
+'rep':['tuto1','debut']
+,'cmd':'none'
+}
+'tuto1':{
+'quest':'Si le panneau est masqué vous pouvez l\'afficher à nouveau en cliquant à nouveau sur son bord(tout à droite de l\'écran). Concentrons nous sur ce panneau de gestion.',
+'sel':['suivant','accueil'],
+'rep':['tuto2','debut']
+,'cmd':'none'
+}
+'showbiblio':{
+'quest':'Voici une liste des rubriques:',
+'sel':['gestion des données','création','ajouter un dialogue','modifier','plan des dialogues'],
+'rep':['datamanager','nameserie','ajoutquestion','modifquestion','dialmap']
+,'cmd':'none'
+}
+'datamanager':{
+'quest':'la gestion des données (uniquement locale pour le moment)',
+'sel':['local sauvegarder','charger local'],
+'rep':['localsave','localload']
+,'cmd':'none'
+},
+'localsave':{
+'quest':'Sauvegarder localement (localStorage): Cliquer sur sauvegarder local. La série doit être nommée, si ce n\est pas le cas une fenêtre vous demandera d\entrer le nom de la série.',
+'sel':['menu données','accueil'],
+'rep':['datamanager', 'debut']
+,'cmd':'none'
+},
+'localload':{
+'quest':'Pour charger une série (locale) sélectionnez d\abord le nom de la série puis ckliquer sur charger-local- ',
+'sel':['menu données','accueil'],
+'rep':['datamanager', 'debut']
+,'cmd':'none'
+}
+} 

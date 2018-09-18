@@ -1,4 +1,27 @@
-/** updated */
+/** *older version
+function brick(w,h,unit){
+	let b={
+	bloc : new Map(),
+	init : function(){	this.bloc.set(WIDTH,w);	this.bloc.set(HEIGHT,h);	this.bloc.set(UNITE,unit);	},
+	type  : 'brick',
+	height: function(){		return this.bloc.get(HEIGHT);},
+	width : function(){		return this.bloc.get(WIDTH); },
+	unit:function(keyname){		let concatene='';if(this.bloc.has(keyname)){	concatene+=this.bloc.get(keyname)+this.bloc.get(UNITE);	return  concatene;} },
+	toText:function(){				let concatene=u(WIDTH)+''+u(HEIGHT);	return concatene;},
+	setUnit:function(u){			this.bloc.set(u);	return this.bloc; },
+	setWidth : function(w){				this.bloc.set(WIDTH,w);		return this.bloc; },
+	setHeight : function(h){			this.bloc.set(HEIGHT,h);	return this.bloc; },
+	
+	regen:function(wid,hei,u = false){	this.setHeight(hei); this.setWidth(wid);	if(u !==false){this.setUnit(u); }	return this.bloc; },
+	revert:function(){ 			return this.regen(		this.height(),this.width(),false); }
+	}
+	this.width = function(){ return this.width;}
+	this.height = function(){ return this.height;}
+	b.init();
+	return b;
+	
+}
+*/
 function brick(w=2,h=1){
 	let b={
 		w:w,h:h,
@@ -13,7 +36,7 @@ function brick(w=2,h=1){
 		height:function(){	return this.h*this.hscale;},
 		dim:function(d='2',u=true){
 			u = u===true ? this.unit : '';
-			d= typeof d === typeof '' ? d.toLowerCase():d;
+			d=d.toLowerCase();
 			d = d==='width' ? 'w': d ;
 			d = d==='height' ? 'h': d ;
 			switch(d){
@@ -44,9 +67,11 @@ function brick(w=2,h=1){
 		scaleToRaw:function(stw,sth){/** same as scaleTo BUT with no brick scale values ! */
 			return [ stw*this.w, sth*this.h ];
 			
-		},
-		get:function(){	return b;},
-		shapeType:function(){
+		}
+	}
+	this.get=function(){	return b;}
+	//-- checking properties type,shapeOrientation
+	function shapeType(){
 		if(b.w===b.h ){
 			if(b.type==='rectangle'){	b.type='square';b.shapeOrientation='center';	}
 			if(b.type==='elipse'){	b.type='circle';b.shapeOrientation='center';	}			
@@ -65,7 +90,7 @@ function brick(w=2,h=1){
 			}
 		}
 
-		}
 	}
-	return b;
+	shapeType();
+	return this;
 }
