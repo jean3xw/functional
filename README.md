@@ -4,10 +4,35 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 //-- todo: écrire un read me crédible, finir la page de présentation(à partir du vieux xml qui traîne quelque part)
 
 /**
-*Pour la librairie voir functional.1.2.3.js (stable) ou functionals.js(la même mais dev en cours)
-et ses modules intitulés functional.MACHIN.js (même si y en a des foireux et qu'il en manque un paquet)
-*/
+-----------------------------------------------------------------------------------------------------------------
+* Description des fichiers notables:
+-----------------------------------------------------------------------------------------------------------------
+**  FUNCTIONAL
+* functional.1.2.3.js version stable de functional (tronc)
+* functionals.js version en cours de développement de functional.X.js
+* functional.head.js gestion du contenu de head(dont interface de style de la page)
+* functional.instructions.js création de fonctions et contexte d'exécution(répéter, automatiser, sélectionner des functions dans un Array [ nom, instructions , paramétre(s) optionnel] ou un liste Array de Array).
 
+** FRAMEWORK
+* loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame, permet aussi d'indiquer une durée en temps(ms) ou nombre de frame. L'exécution des instructions peut aussi être divisé en avant, pendant et après (chaque étape pouvant utiliser les résultats obtenus par la phase précédente).
+* datacollection.js modèle de données comprenant un générateur (factory pattern)
+* domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du DOM(sérialisable)
+
+** AUTRES
+* canvasmachine.1.js interface de dessin CANVASRenderer2D
+* dom2d.js une alternative à canvas de dessin 2D utilisant des éléments DOM pour simuler (dev non aboutit)
+-----------------------------------------------------------------------------------------------------------------
+
+** PREVUS PLUS TARD OU EN COURS
+* des générateurs d'items spécifiques au framework (factory pattern) 
+* des presets graphiques utilisant CSS, SVG, ASCII pour générer des objets graphiques (i.e.: functional.graphickit.js )
+* plusieurs interfaces utilisateur dans plusieurs contextes(menus de dialogue, interactivité canvas...) voir functional.modal.js, functional.form.js, functional.canvasIHM.js
+* des API et widget à la pelle
+* une interface graphique de développement en HTML
+-----------------------------------------------------------------------------------------------------------------
+ET bien d'autres bonnes et belles choses!!!
+*/
+-----------------------------------------------------------------------------------------------------------------
 (functional.JS is using functional programming in a JavaScript context).
 functional.js est une librairie (en groupe de fichiers) s'appuyant au max sur la programmation fonctionnelle et uniquement axé en JavaScript.
 
