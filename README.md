@@ -11,7 +11,7 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 * functional.1.2.3.js version stable de functional (tronc)
 * functionals.js version en cours de développement de functional.X.js
 * functional.head.js gestion du contenu de head(dont interface de style de la page)
-* functional.instructions.js création de fonctions anonymes nommées e contexte d'exécution
+* functional.instructions.js création de fonctions et contexte d'exécution(répéter, automatiser, sélectionner des functions dans un Array [ nom, instructions , paramétre(s) optionnel] ou un liste Array de Array).
 
 ** FRAMEWORK
 * loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame
