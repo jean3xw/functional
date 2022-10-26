@@ -8,15 +8,17 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 * Description des fichiers notables:
 -----------------------------------------------------------------------------------------------------------------
 **  FUNCTIONAL
-* functional.1.2.3.js version stable de functional (tronc)
+* functional.1.2.4.js version stable de functional (tronc)
 * functionals.js version en cours de développement de functional.X.js
 * functional.head.js gestion du contenu de head(dont interface de style de la page)
+* functional.modal.js create a modal window, params set content, size/position and animation/no animation
 * functional.instructions.js création de fonctions et contexte d'exécution(répéter, automatiser, sélectionner des functions dans un Array [ nom, instructions , paramétre(s) optionnel] ou un liste Array de Array).
+* functional.element.js interface de création HTMLElement with params to set attributes and content
 
 ** FRAMEWORK
 * loopexe.js boucle d'exécution comparable à un thread utilisant requestAnimationFrame, permet aussi d'indiquer une durée en temps(ms) ou nombre de frame. L'exécution des instructions peut aussi être divisé en avant, pendant et après (chaque étape pouvant utiliser les résultats obtenus par la phase précédente).
 * datacollection.js modèle de données comprenant un générateur (factory pattern)
-* domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du DOM(sérialisable)
+*
 
 ** AUTRES
 * canvasmachine.1.js interface de dessin CANVASRenderer2D
@@ -77,3 +79,6 @@ _18/09/18 AJOUT de fichiers notyetused.functional.MODULENAME.js le préfixe noty
 A NOTER : notyet.used.polyfill.js ne contient pas tout les polyfill(pour l'instant) certains qui sont nécessaires à un module ou l'autre sont intégrés directement. A corriger.
   notyetused.ecmascript6.js contient des spécifités à ES6 (pour l'instant uniquement la création de symboles) même si d'autres sont incluses soit dans le tronc commun soit dans les fichiers de module.
  notyetused.functional.form.js est à compléter même si déjà pas mal de funcs incluse(donc quelques nouveautés de balises HTML5), notyetused.functional.media.js ne contient qu'une petite interface pour API video player , notyetused.functional.color.js un convertisseur hexa 2 bits / rgb255, notyetused.functional.element.js est assez étoffé mais pas une nécessité réelle pour l'instant car pas mal de funcs déjà incluses dans tronc commun.
+ 
+ OLD:
+  domtree.1.js un DOM virtuel comportant vue et données, des fonctions de mises à jour du DOM(sérialisable) replaced by functional.element.js
