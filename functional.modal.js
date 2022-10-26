@@ -33,7 +33,7 @@ function newModal(id,bt,aim,content,width,height,vt='center',hz='center',maxresi
 			case 'center':vertical=parseFloat((100-h)/2);break;
 			case 'top':vertical=0;break;
 			case 'bottom':vertical=parseFloat(96.3-h);break;//-- NOTE : always a decalage at bottom(so it wont force scrollbar/overflow to show)
-			default:seelog('undefined vertical(hz) string parameter. top decay will be set to center');vertical=parseFloat((100-h)/2);
+			default:saylog('undefined vertical(hz) string parameter. top decay will be set to center');vertical=parseFloat((100-h)/2);
 			break;
 		}
 	}
@@ -42,7 +42,7 @@ function newModal(id,bt,aim,content,width,height,vt='center',hz='center',maxresi
 			case 'center':horizontal=parseFloat((100-w)/2);break;
 			case 'left':horizontal=0;break;
 			case 'right':horizontal=parseFloat(99.4-w);break;
-			default:seelog('undefined horizontal(vt) string parameter. left decay will be set to center');horizontal=parseFloat((100-w)/2);
+			default:saylog('undefined horizontal(vt) string parameter. left decay will be set to center');horizontal=parseFloat((100-w)/2);
 			break;
 		}
 	}
@@ -89,7 +89,7 @@ function newModal(id,bt,aim,content,width,height,vt='center',hz='center',maxresi
 		}
 	},false);
     
-	if(maxresize===true && content.nodeName!==undefined ){		styleSet(styleSet(content,'width','100%'),'height','100%'); }
+	if(maxresize===true && content.nodeName!==undefined ){		addPageStyle(addPageStyle(content,'width','100%'),'height','100%'); }
 	
 	return [modal,modalContent,btn];
 }
