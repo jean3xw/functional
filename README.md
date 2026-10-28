@@ -3,7 +3,9 @@ une librairie de programmation fonctionelle JavaScript (et son framework)
 
 //-- todo: écrire un read me crédible, finir la page de présentation(à partir du vieux xml qui traîne quelque part)
 
-/**
+/** IMPORTANT **
+** UTILISER  functional.1.2.4.js qui est le fichier à jour et terminé pour exploitation
+* functional.instructions.js et functional.element.js SONT AUSSI EXPLOITABLE MAIS NON FINALISés
 -----------------------------------------------------------------------------------------------------------------
 * Description des fichiers notables:
 -----------------------------------------------------------------------------------------------------------------
